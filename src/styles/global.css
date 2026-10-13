@@ -68,12 +68,11 @@ h1 em, h2 em { color: var(--gold-light); font-weight: inherit; }
 .hero__product-note small { color: #d8e1ce; font-size: .72rem; line-height: 1.5; }
 .hero__marquee { position: relative; z-index: 2; min-height: 3.25rem; overflow: hidden; border-top: 1px solid rgb(255 255 255 / .16); background: #0b2619; color: #c9d4b5; font-size: clamp(.65rem, 2.4vw, .75rem); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .hero__marquee-track { display: flex; width: max-content; min-height: 3.25rem; animation: brand-marquee 18s linear infinite; will-change: transform; }
-.hero__marquee-group { display: flex; flex: 0 0 auto; align-items: center; gap: 1.45rem; padding-inline: 1.45rem; }
+.hero__marquee-group { display: flex; flex: 0 0 auto; min-width: 100vw; align-items: center; justify-content: space-around; gap: 1.45rem; padding-inline: 1.45rem; }
 .hero__marquee-message { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 1.45rem; white-space: nowrap; }
 .hero__marquee-message i { flex: 0 0 .3rem; width: .3rem; height: .3rem; border-radius: 50%; background: var(--gold); }
 @keyframes brand-marquee { to { transform: translateX(-50%); } }
-.hero__marquee:hover .hero__marquee-track { animation-play-state: paused; }
-@media (prefers-reduced-motion: reduce) { .hero__marquee-track { animation: none; } .hero__marquee-group:nth-child(2) { display: none; } }
+@media (prefers-reduced-motion: reduce) { .hero__marquee-track { animation-duration: 32s; } }
 
 .products { overflow: hidden; }
 .products__grid { display: grid; grid-template-columns: 1fr; gap: 1.3rem; margin-top: 2.8rem; }
