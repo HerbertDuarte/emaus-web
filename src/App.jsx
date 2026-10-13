@@ -1,4 +1,5 @@
 import { BrandMark } from './components/BrandMark'
+import { BrandMarquee } from './components/BrandMarquee'
 import { ProductCard } from './components/ProductCard'
 import { SectionTitle } from './components/SectionTitle'
 import { SiteHeader } from './components/SiteHeader'
@@ -44,15 +45,7 @@ export default function App() {
               <img src="/images/picles-emaus-800ml-cutout.png" alt="Pote original de picles de pepino Emaús, 800 ml" />
             </div>
           </div>
-          <div className="hero__marquee" aria-hidden="true">
-            <div className="hero__marquee-track">
-              {[0, 1].map((copy) => (
-                <div className="hero__marquee-group" key={copy}>
-                  <span>ARTESANAL</span><i /><span>NATURAL</span><i /><span>COM PROPÓSITO</span><i /><span>FEITO COM CARINHO</span><i />
-                </div>
-              ))}
-            </div>
-          </div>
+          <BrandMarquee />
         </section>
 
         <section className="products section container" id="produtos">
