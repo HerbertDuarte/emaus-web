@@ -1,3 +1,4 @@
+import { FaWhatsapp } from 'react-icons/fa'
 import { createWhatsAppLink } from '../utils/whatsapp'
 
 export function WhatsAppButton({ message, children, variant = 'primary', className = '', ...linkProps }) {
@@ -9,7 +10,7 @@ export function WhatsAppButton({ message, children, variant = 'primary', classNa
       rel="noreferrer"
       {...linkProps}
     >
-      <span className="whatsapp-button__icon" aria-hidden="true">⌕</span>
+      <FaWhatsapp className="whatsapp-button__icon" aria-hidden="true" />
       {children}
     </a>
   )
